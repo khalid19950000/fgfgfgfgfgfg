@@ -1,0 +1,254 @@
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة  العلي</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="شعار الشركة">
+            
+        </div>
+       <div> <marquee behavior=""><h1  class="div1">شركة  العلي للمقاولات</h1></marquee>
+        <p id="p1">نحن نؤمن ببناء أفضل المشاريع مع الجودة والاحترافية</p><br>
+        <a href="#services" class="btn">اكتشف خدماتنا</a>
+       </div>
+       
+        
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#projects">مشاريعنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="home-section">
+        <div class="home-content" >
+            
+        
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services-section">
+        <h2 style="color: aliceblue;">خدماتنا</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3 >التصميم والبناء</h3>
+                <p  style="color: rgb(46, 47, 48); font-size:30px;  font-weight: bold;">نقوم بتصميم وبناء المشاريع بكفاءة وجودة عالية.</p>
+            </div>
+            <div class="card">
+                <h3>إعادة الإعمار</h3>
+                <p  style="color: rgb(46, 47, 48);font-size:30px;  font-weight: bold;">إعادة إعمار المباني التالفة مع الحفاظ على الجودة.</p>
+            </div>
+            <div class="card">
+                <h3>التشطيب الداخلي</h3>
+                <p style="color: rgb(46, 47, 48);font-size:30px;  font-weight: bold;">أحدث أساليب التشطيب الداخلي التي تضفي جمالية على كل مكان.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="projects-section">
+        <p id="p2" >مشاريعنا</p>
+        <div class="project-gallery">
+            <div class="project-card">
+                <div class="one">
+                   
+                       
+                    <h4> تزفيت االطرقات </h4>
+                    <div class="gallery-container">
+                        
+                        <img src="14.jpeg" alt="صورة 1" class="active">
+                        <img src="9.jpg" alt="صورة 2">
+                        <img src="10.jpg" alt="صورة 3">
+                        <img src="11.jpg" alt="صورة 4">
+                        <img src="12.jpg" alt="صورة 4"> 
+                        <img src="13.jpg" alt="صورة 4">
+                       
+                    </div>
+                    
+                </div><br><br>
+
+                
+               
+                    <img id="img1" src="16.png"  onclick="prevImage() " >
+             
+                    <img id="img1" src="15.png"  onclick="nextImage()" >
+            </div>
+            <div class="project-card">
+                <h4> تأهيل مكب  </h4>
+                    <div class="gallery-container1">
+                        
+                        <img src="18.jpg" alt1="صورة 1" class="active">
+                        <img src="19.jpg" alt1="صورة 2">
+                        <img src="20.jpg" alt1="صورة 3">
+                        <img src="21.jpg" alt1="صورة 4">
+                        <img src="22.jpg" alt1="صورة 4"> 
+                       
+                       
+                    </div><br>
+                    <img id="img1" src="16.png"  onclick="prevImage1() " >
+             
+                    <img id="img1" src="15.png"  onclick="nextImage1()" >
+                
+            </div>
+            <div class="project-card">
+                <h4> بناء سوق شعبي</h4>
+                <div class="gallery-container2">
+                        
+                    <img src="24.jpg" alt="صورة 1" class="active">
+                    <img src="25.jpg" alt="صورة 2">
+                    <img src="26.jpg" alt="صورة 3">
+                    <img src="27.jpeg" alt="صورة 4">
+                    <img src="28.jpg" alt="صورة 4"> 
+                    <img src="29.jpg" alt="صورة 4">
+                   
+                </div><br>
+                <img id="img1" src="16.png"  onclick="prevImage2() " >
+             
+                    <img id="img1" src="15.png"  onclick="nextImage2()" >
+                
+        </div>
+    </section>
+   
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="contact-section">
+        <h2>---------------------------------------------تواصل معنا---------------------------------------------</h2>
+       <p>شركة العلي للمقاولات</p>
+       <p>  مدير الشركة: المهندس خالد أحمد العلي</p>
+       <p>  رقم الهاتف:
+        00963967948307
+       </p>
+       <p>   alali.alali1995@hotmail.com   :البريد الاكتروني</p>
+    </section>
+
+    <footer>
+        <p>     شركة  العلي للمقاولات</p>
+    </footer>
+     <!--  //.................................................................................................................. -->
+    <script>
+        // الحصول على كل الصور
+        const images = document.querySelectorAll('.gallery-container img');
+        let currentIndex = 0;
+        
+        function updateGallery() {
+            // إظهار الصورة الحالية فقط
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentIndex);
+            });
+        
+            //... تحديث حالة الأزرار
+            document.getElementById('prev').disabled = currentIndex === 0;
+            document.getElementById('next').disabled = currentIndex === images.length - 1;
+        }
+        
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateGallery();
+            }
+        }
+        
+        function nextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+                updateGallery();
+            }
+        }
+        </script>
+    <!--  //...................... تحريك صور تاهيل مكب............................................................................... -->
+    <script>
+        // الحصول على كل الصور
+        const images1 = document.querySelectorAll('.gallery-container1 img');
+        let currentIndex1 = 0;
+        
+        function updateGallery1() {
+            // إظهار الصورة الحالية فقط
+            images1.forEach((img, index) => {
+                img.classList.toggle('active', index === currentIndex1);
+            });
+        
+            //... تحديث حالة الأزرار
+            document.getElementById('prev').disabled = currentIndex1 === 0;
+            document.getElementById('next').disabled = currentIndex1 === images1.length - 1;
+        }
+        
+        function prevImage1() {
+            if (currentIndex1 > 0) {
+                currentIndex1--;
+                updateGallery1();
+            }
+        }
+        
+        function nextImage1() {
+            if (currentIndex1 < images1.length - 1) {
+                currentIndex1++;
+                updateGallery1();
+            }
+        }
+        </script>
+           <!--  //...................... بناء سوق شعبي حركات.............................................................................. -->
+        <script>
+            // الحصول على كل الصور
+            const images2 = document.querySelectorAll('.gallery-container2 img');
+            let currentIndex2 = 0;
+            
+            function updateGallery2() {
+                // إظهار الصورة الحالية فقط
+                images2.forEach((img, index) => {
+                    img.classList.toggle('active', index === currentIndex2);
+                });
+            
+                //... تحديث حالة الأزرار
+                document.getElementById('prev').disabled = currentIndex2 === 0;
+                document.getElementById('next').disabled = currentIndex2 === images2.length - 1;
+            }
+            
+            function prevImage2() {
+                if (currentIndex2 > 0) {
+                    currentIndex2--;
+                    updateGallery2();
+                }
+            }
+            
+            function nextImage2() {
+                if (currentIndex2 < images2.length - 1) {
+                    currentIndex2++;
+                    updateGallery2();
+                }
+            }
+            
+            </script>
+               <!--  //......................تبديل نصوص المقدمة............................................................................. -->
+           
+             <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const textElement = document.getElementById("p1");
+                    const texts = [
+                        "نحن نؤمن ببناء أفضل المشاريع مع الجودة والاحترافية",
+                        "سرعة في الإنجاز ودقة بالعمل بأعلى معايير الجودة",
+                        "تصميم يجسد رؤيتك بتفاصيل تميزنا بأعمالنا ونجاحكم هدفنا"
+                    ];
+                    let currentIndex = 0;
+        
+                    function switchText() {
+                        textElement.innerText = texts[currentIndex];
+                        currentIndex = (currentIndex + 1) % texts.length;
+                    }
+        
+                    setInterval(switchText, 3000);
+                });
+            </script>
+</body>
+</html>
